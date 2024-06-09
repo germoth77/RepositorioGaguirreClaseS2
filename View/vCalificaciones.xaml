@@ -1,28 +1,64 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="GaguirreClaseS2.View.vCalificaciones"
+             x:Class="GaguirreClaseS2.VIEWS.vCalificaciones"
              Title="vCalificaciones">
-    <VerticalStackLayout
-        Spacing="25"
-        Padding="20">
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="20">
+            <Label 
+                Text="SISTEMA DE CALIFICACIONES"
+                FontSize="20"
+                TextColor="Gold"
+                HorizontalOptions="Center" />
+            <Label 
+                Text="PARCIAL 1"
+                FontSize="20"
+                TextColor="Gold"
+                HorizontalOptions="Start" />
 
-        <Label 
-            Test="SISTEMAS DE CALIFICACIONES" 
-            FontSize="24"
-            HorizontalTextAlignment="Center"
-            TextColor="SlateGrey" />
-        <Label Text="Parcial 1"
-               FontSize="20"
-               TextColor="Green"/>
-        <Picker x:Name="pkEstudiantes" Title="Estudiantes">
-            <Picker.Items>
-                <x:String>Jorge</x:String>
-                <x:String>Antonio<x:String>
-                <x:String>Manuel<x:String>
-               <x:String>Fernando<x:String>
-               <x:String>Julio<x:String>
-                                                </Picker>
+            <Picker x:Name="pkEstudiantes" Title="ESTUDIANTES">
+                <Picker.Items>
+                    <x:String>Manuel</x:String>
+                    <x:String>Victor</x:String>
+                    <x:String>Franco</x:String>
+                    <x:String>Julio</x:String>
+                    <x:String>Roberto</x:String>
+                </Picker.Items>
+            </Picker>
 
-    </VerticalStackLayout>
+            <Entry x:Name="txtSeguimiento"
+                  Placeholder="Ingresa N Seguimiento"
+                  Keyboard="Numeric"
+                  MaxLength="10" />
+
+            <Entry x:Name="txtExamen"
+                   Placeholder="Ingresa N Exámen"
+                   Keyboard="Numeric"
+                   MaxLength="10" />
+
+            <Label 
+                Text="PARCIAL 2"
+                FontSize="20"
+                TextColor="Green"
+                HorizontalOptions="Start" />
+
+            <Entry x:Name="txtSeguimientoP2"
+                Placeholder="Ingresa N Seguimiento 2"
+                Keyboard="Numeric"
+                MaxLength="10" />
+
+            <Entry x:Name="txtExamen2"
+                Placeholder="Ingresa N Exámen 2"
+                Keyboard="Numeric"
+                MaxLength="10" />
+
+            <DatePicker x:Name="dpFecha" Format="MM/dd/yyyy" />
+
+            <Button x:Name="btnCalcular"
+                    Text="Calcular Notas del Estudiante"
+                    Clicked="btnCalcular_Clicked" />
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
