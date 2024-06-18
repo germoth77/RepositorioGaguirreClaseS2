@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GaguirreClaseS2.View.login"
+             NavigationPage.HasNavigationBar="False"
+             Title="login">
+    <VerticalStackLayout
+        Padding="20"
+        Spacing="20">
+        <Label 
+            Text="INICIO DE SESION"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            FontSize="20"
+            TextColor="Blue"
+            />
+
+        <Image Source="imagen.jpg" WidthRequest="300"/>
+        <Grid RowSpacing="15">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Text="USUARIO"
+ HorizontalOptions="Center"
+ FontSize="18"
+ VerticalOptions="Center"
+ Grid.Row="0"
+ Grid.Column="0">
+            </Label>
+
+            <Entry x:Name="txtUsuario"
+ Placeholder="Ingrese el usuario"
+ Grid.Row="0"
+ Grid.Column="1"/>
+            <Label Text="CONTRASEÑA"
+ HorizontalTextAlignment="Center"
+ VerticalOptions="Center"
+ HorizontalOptions="Center"
+ FontSize="18"
+ Grid.Row="1"
+ Grid.Column="0"/>
+
+            <Entry x:Name="txtPassword"
+    Placeholder="Ingrese la contraseña"
+  IsPassword="True"
+  Grid.Row="1"
+  Grid.Column="1"/>
+
+
+            <Button x:Name="btnInicio"
+  Text="INICIAR SESION"
+  Clicked="btnInicio_Clicked"
+  Grid.Row="3"
+  Grid.Column="1"/>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

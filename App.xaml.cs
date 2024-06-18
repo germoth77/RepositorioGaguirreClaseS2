@@ -5,7 +5,7 @@
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new GaguirreClaseS2.VIEWS.vCalificaciones());
+            MainPage = new NavigationPage(new View.login());
         }
     }
 }
